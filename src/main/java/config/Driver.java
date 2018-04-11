@@ -1,8 +1,10 @@
 package config;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Driver {
@@ -31,8 +33,12 @@ public class Driver {
     }
 
     private FirefoxDriver create_firefox_driver(){
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        return new FirefoxDriver(firefoxOptions);
+//        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//        capabilities.setVersion("latest");
+//        capabilities.setPlatform(Platform.MAC);
+//        capabilities.setCapability("name", "Testing Selenium");
+//        FirefoxOptions firefoxOptions = new FirefoxOptions(capabilities);
+        return new FirefoxDriver();
     }
 
     private ChromeDriver create_chrome_driver(){
