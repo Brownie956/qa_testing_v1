@@ -1,4 +1,4 @@
-package helpers.page_objects;
+package ui.helpers.page_objects;
 
 import org.openqa.selenium.By;
 

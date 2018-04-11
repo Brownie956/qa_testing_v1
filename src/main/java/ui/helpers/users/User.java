@@ -1,6 +1,6 @@
-package helpers.users;
+package ui.helpers.users;
 
-import config.Conf;
+import ui.config.Conf;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public abstract class User {

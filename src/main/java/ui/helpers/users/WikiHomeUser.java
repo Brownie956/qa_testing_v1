@@ -1,6 +1,6 @@
-package helpers.users;
+package ui.helpers.users;
 
-import helpers.page_objects.WikiHomePage;
+import ui.helpers.page_objects.WikiHomePage;
 
 public class WikiHomeUser extends User {
 

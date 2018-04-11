@@ -1,7 +1,7 @@
-package tests;
+package ui.tests;
 
-import config.Conf;
-import config.Driver;
+import ui.config.Conf;
+import ui.config.Driver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;

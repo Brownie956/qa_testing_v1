@@ -1,7 +1,7 @@
-package tests;
+package ui.tests;
 
-import helpers.page_objects.WikiHomePage;
-import helpers.users.WikiHomeUser;
+import ui.helpers.page_objects.WikiHomePage;
+import ui.helpers.users.WikiHomeUser;
 import junit.framework.ComparisonFailure;
 import junit.framework.TestCase;
 import org.junit.Before;
