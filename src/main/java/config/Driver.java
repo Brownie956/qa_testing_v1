@@ -33,11 +33,7 @@ public class Driver {
     }
 
     private FirefoxDriver create_firefox_driver(){
-//        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-//        capabilities.setVersion("latest");
-//        capabilities.setPlatform(Platform.MAC);
-//        capabilities.setCapability("name", "Testing Selenium");
-//        FirefoxOptions firefoxOptions = new FirefoxOptions(capabilities);
+//        TODO need to get GekhoDriver working for this to work
         return new FirefoxDriver();
     }
 
