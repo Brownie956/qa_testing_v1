@@ -2,34 +2,38 @@ package ui.tests;
 
 import ui.helpers.page_objects.WikiHomePage;
 import ui.helpers.users.WikiHomeUser;
-import junit.framework.ComparisonFailure;
-import junit.framework.TestCase;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
-public class WikiHomeTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class WikiHomeTest implements BaseTest {
 
     private WikiHomeUser user;
 
-    @BeforeClass
-    public void setUp() throws Exception {
+    @BeforeAll
+    public void setUp() {
         this.user = new WikiHomeUser();
     }
 
-    @Before
-    public void before() throws Exception {
+    @AfterAll
+    public void tearDown(){
+        user.tearDown();
+    }
+
+    @BeforeEach
+    void before() {
         user.navigate_to(WikiHomePage.URL);
     }
 
     @Test
-    public void test_home_page_loads_correctly() throws ComparisonFailure {
+    void test_home_page_loads_correctly() {
         user.navigate_to(WikiHomePage.URL);
         assertEquals("Wikipedia, the free encyclopedia", user.views_page_title());
     }
 
     @Test
-    public void test_home_page_contents_link() throws ComparisonFailure {
+    void test_home_page_contents_link() {
         user.navigate_to(WikiHomePage.URL);
         user.clicks_wiki_home_menu_contents();
         assertEquals("Portal:Contents - Wikipedia", user.views_page_title());
